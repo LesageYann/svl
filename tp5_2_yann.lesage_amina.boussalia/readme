@@ -1,0 +1,16 @@
+une interface(non faite) créera les joueurs et le GameMotor ainsi que de stream pour l'échange d'info entre le GameMotor et l'interface.
+
+le gameMotor ordonne le tour de jeu et dit quel joueur joue et comment
+le joueur se créer avec un dés et un plateau(board) contenant les numéro et leur positions  
+le plateau contient certaines régle pour déterminé :
+ quand un joueur peut lancer un seul dés
+ quand le joueur joue une combinaison invalide
+
+sans GameMotor, la couverture de test est de 100%
+GameMotor n'est pas finir de tester car :
+Nous n'avons pas réussi a trouver comment corriger l'erreur TypeError: 'AnswerSelector' object is not iterable
+Du coup on a continué l'implémentation de GameMotor pour pouvoir donner les tests qu'il nous reste encore a faire :
+-- faire deux test pour voir les write dans output stream quand on a les erreurs NumberAlreadyUsedError et InvalidNumberOfDiceError
+-- un test pour verifier que le jeu se stop bien avec les bon output
+-- un test pour verifier qu'on ai les bon output lors d'un tour
+-- un test d'intégration avec tous les composants
