@@ -1,0 +1,10 @@
+
+class Log:
+    def __init__(self, date, priority, msg):
+        self.date = date
+        self.priority = priority
+        sefl.msg = msg
+        
+class FiltreLogOnPriority:
+
+

@@ -1,0 +1,9 @@
+import unittest
+from mockito import *
+
+class TestLoggingManuel(unittest.TestCase):
+    def test_troncat_name(self):
+        creator = LogingCreator();
+        creator.create_loging(name, fisrt_name, login)
+
+#        def test_troncat_name(self):

@@ -1,0 +1,5 @@
+nosetest -v --with-coverage --coverage-erase --cover-html --critere-arcs --criter-branches --cover-package
+
+-emprunter un livre
+--
+-rendre un livre

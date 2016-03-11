@@ -1,0 +1,1 @@
+nosetest -v --with-coverage --coverage-erase --cover-html --critere-arcs --criter-branches

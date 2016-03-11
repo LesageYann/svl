@@ -1,0 +1,5 @@
+class TestJeuDevinerUnNombre(unittest.TestCase):
+    def test_win_first_try_succes(self):
+        generateur = mock
+        jeu = jeu()
+        jeu.jouer()

@@ -1,0 +1,8 @@
+class Jeu:
+    def __init__(self, generateur, lecteur, afficheur):
+        self. generateur = generateur 
+        self.lecteur= lecteur
+        self.afficheur=afficheur
+
+    def jouer(self):
+        self.afficheur.notifier_joueur_a_gagne()

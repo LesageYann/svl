@@ -1,0 +1,3 @@
+Dans la version à une classe, on a tendance a avoir des tests plus concentré sur une seule fonction et souvent moins aérer. Bien que la lisibilité du code est plutôt bonne, on a tendance a faire grossir un peu plus nos fonctions.
+
+Dans la version avec deux classes, la lecture des tests s'améliorent. De plus la vérification n'est plus couplé avec la création.
