@@ -1,0 +1,59 @@
+TP SVL 15-16 - vérification de programmes objets
+
+1. Hoare et Dijkstra
+
+Q - Que signifie le triplet de Hoare {x > 0} y := x {y > 0} ?
+pour tout x supérieur à 0, après exécution du prog y:=x, on a y supérieur à 0
+
+
+Q - Indiquer pour chacun des triplets suivants s'il est valide ou non, dans ce cas donner un contre-exemple.
+
+* {x > 0} y := x {y > 0}	valide
+* {x > 0} x := x + 1 {x > 10}	invalide, ex si x=1, x:=1+1, x=2 donc x n'est pas supérieur à 10
+* {x >0} x := 15 {x > 10}	valide
+
+Q - Donner la formule logique qui doit être prouvée valide pour prouver que { x > 5 } x := x + 1 { x > 3 } en utilisant sp
+
+Q - Donner la formule logique qui doit être prouvée valide pour prouver que { True} si x > 0 then y := x else y := -x  { y >= 0 } en utilisant sp
+
+2. Validité et satisfaisabilité
+
+Q- Qu'est-ce qu'une formule valide ?
+c'est une formule peut être réarranger en plus petits prédicats afin de savoir si un programme peut être résolue ou si il est infaisable
+
+Q- qu'est-ce qu'une formule satisfaisable ?
+c'est une formule valide avec au moins une solution donnant vrai
+
+
+Q- F valide ssi F est satisfaisable (compléter les ...)
+
+3. z3
+
+Q- qu'est-ce qu'un solveur SMT ?
+c'est un solveur qui pour une formule donné et un contexte(ensemble des axiomes) vérifie la satisfaisabilité de la formule
+
+Q- qu'est-ce qu'une logique non décisable ?
+c'est une logique dont on ne peut prouver ni infirmer sa validité
+
+Q- la logique du premier ordre non quantifiée est-elle décidable ?
+non, ce sont des dogmes
+
+Q- donner une formule non quantifiée pour laquelle z3 ne sait pas si elle satisfaisable ou non
+
+
+Q- prouver avec z3 que { x > 5 } x := x + 1 { x > 3 } (utiliser les résultats précédents)
+
+Q - prouver avec z3 que { True} si x > 0 then y := x else y := -x  { y >= 0 }  (utiliser les résultats précédents)
+
+4. vérification avec les outils de RiSE - les comptes avec et sans découvert
+
+Reprendre l'étude de cas "compte" fait en CTD8 pour présenter la prog par contrats.
+
+Q- En utilisant Rise4fun pour Spec#, spécifier et vérifier un compte simple (qui ne prend pas en compte la notion de découvert). Le programme est-il prouvé correct ?
+
+Q- ajouter la notion de découvert telle que vue dans la démo du CTD8. Le programme est-il prouvé correct ? Voyez-vous pourquoi ?
+
+Q- sur ce même programme, utiliser Contracts + interprétation abstraite. Le programme est-il prouvé correct ? Une suggestion de modification est-elle proposée ? Qu'en pensez-vous ?
+
+Q- pensez-vous qu'un outil à la Pex vous aurait permis de trouver l'erreur ?
+
