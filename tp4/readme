@@ -1,0 +1,8 @@
+jeu : deviner un nombre
+
+0 <= nbr <=9
+M tentative
+
+classes :
+Display
+Controller

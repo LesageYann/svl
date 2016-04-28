@@ -1,0 +1,20 @@
+jeu : deviner un nombre
+
+0 <= nbr <=9
+M tentative
+
+classes :
+Display
+Game <-
+  fonctionnalité : lancer le jeu
+  on test déroulement du tour a l'interieur du scénario:
+    tester le -
+    tester le +
+    tester le nombre de tentative
+  on test le jeu :
+    on ganne au premier, au milieu, au dernier
+    on perd
+ChooseNumberStrategie <-- classe abstraite
+   IAChoosePlusOne
+   IAChooseRandom
+   HumainChoose

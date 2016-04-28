@@ -1,0 +1,9 @@
+import unittest
+from mockito import *
+
+class TestEmprunterUnLivre(unittest.TestCase):
+
+    def test_livre_consultable_uniquement_echec_emprunt(self):
+        livre=mock()
+        serviceEmprunts = ServiceEmprunts()
+        self assertRaise(LivreNonEmpruntable, serviceEmprunts.emprunter, livre)

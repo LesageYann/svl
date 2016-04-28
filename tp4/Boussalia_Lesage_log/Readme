@@ -1,0 +1,1 @@
+Un peu de mal avec le principe de séparer l'écriture et le la lecture en deux classe. Pour moi c'est une seule responsabilité de faire la sérialisation et le reveil des messages.

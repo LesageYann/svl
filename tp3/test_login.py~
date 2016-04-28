@@ -1,0 +1,47 @@
+from login import LoginCreator, AlreadyUsedError, ToLongLoginError,NoMinASCIIError
+import unittest
+from mockito import *
+
+class TestLoggingManuel(unittest.TestCase):
+    def test_login_alrealdy_used_fail(self):
+        data=mock()
+        when(data).exist('erreur').thenReturn(True)
+        creator = LoginCreator(data)
+        self.assertRaises(AlreadyUsedError,
+                          creator.create_login,
+                          'test',
+                          'aLaCon',
+                          'erreur')
+
+    def test_login_to_long_fail(self):
+        data=mock()
+        creator = LoginCreator(data)
+        self.assertRaises(ToLongLoginError,
+                          creator.create_login,
+                          'test',
+                          'aLaCon',
+                          'testtestC')
+        
+    def test_bound_login_not_to_long_9(self):
+        data=mock()
+        when(data).exist('testtest').thenReturn(False);
+        creator = LoginCreator(data)
+        self.assertEquals('testtest', creator.create_login('test','vide','testtest'))
+
+    def test_login_succes_8(self):
+        data=mock()
+        when(data).exist('test').thenReturn(False);
+        creator = LoginCreator(data)
+        self.assertEquals('test', creator.create_login('test','vide','test'))
+
+    def test_minuscule_ASCII_echec(self):
+        data=mock()
+        creator = LoginCreator(data)
+        self.assertRaises(NoMinASCIIError,
+                          creator.create_login,
+                          'test',
+                          'aLaCon',
+                          'test2T')
+
+
+#        def test_troncat_name(self):

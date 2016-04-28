@@ -1,0 +1,13 @@
+#class TestSelector(unittest.TestCase):
+#    def test_selector_priority_more_than_required_succes(self):
+#        log= mock()
+#        log.priority = 7
+#        filtre = SelectorLogOnPriority(5)
+#        self.assertTrue(filtre.accept(log))
+
+class TestMotor(unittest.TestCase):
+    def test_read_one_log_succes(self):
+        entree = io.StringIO("2010, 5, msg1\n")
+        filtre = mock()
+        when(filtre).accept(any()).thenReturn(True)
+        
